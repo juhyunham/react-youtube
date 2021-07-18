@@ -1,0 +1,48 @@
+.video {
+  display: flex;
+  align-items: center;
+  width: calc(50% - 10px);
+  box-sizing: border-box;
+  border: 1px solid #e1e1e3;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(30,100,50,0.1);
+}
+
+.video:hover .thumbnail {
+  transform: scale(1.2);
+}
+
+.img_wrap {
+  overflow: hidden;
+  flex: none;
+  width: 200px;
+}
+
+.thumbnail {
+  width: 100%;
+  transition: transform 500ms ease-in;
+}
+
+.info_wrap {
+  margin: 0 10px;
+}
+
+.title, 
+.channel {
+  margin: 0;
+}
+
+.title {
+  height: 40px;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.channel {
+  font-size: 15px;
+}
