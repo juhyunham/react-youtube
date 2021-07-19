@@ -1,7 +1,7 @@
-import React , {useRef} from 'react';
+import React , {useRef, memo} from 'react';
 import styles from './search.module.css'
 
-const Search = ({ onSearch }) => {
+const Search = memo(({ onSearch }) => {
 	const inputRef = useRef()
 	
 	const handleSearch = () => {
@@ -32,6 +32,6 @@ const Search = ({ onSearch }) => {
 			</button>
 		</div>
 	</header>);
-};
+});
 
 export default Search;

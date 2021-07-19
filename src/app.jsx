@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import style from './app.module.css'
 import VideoList from './components/video_list/video_list';
 import Search from './components/search/search';
@@ -12,19 +12,19 @@ function App({ youtube }) {
     setSelectedVideo(video)
   }
 
-  const search = query => {
+  const search = useCallback(query => {
     youtube
     .search(query)
     .then(video => setVideos(video))
 
     setSelectedVideo(null)
-  }
+  }, [youtube])
 
   useEffect(() => {
     youtube
     .mostPopular()
     .then(video => setVideos(video))
-  }, [])
+  }, [youtube])
 
   return (
     <div className={style.app}>
