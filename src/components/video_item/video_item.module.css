@@ -3,11 +3,8 @@
   align-items: center;
   width: calc(50% - 10px);
   box-sizing: border-box;
-  border: 1px solid #e1e1e3;
   margin-left: 10px;
   margin-bottom: 5px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px rgba(30,100,50,0.1);
 }
 
 .video.grid {
@@ -16,6 +13,20 @@
 
 .video.list {
   width: calc(100% - 10px);
+}
+
+.video button {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #e1e1e3;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  text-align: left;
 }
 
 .video:hover .thumbnail {

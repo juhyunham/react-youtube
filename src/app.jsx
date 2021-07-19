@@ -6,16 +6,18 @@ import VideoDetail from './components/video_detail/video_detail';
 
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
-  const [selectedVideo, setSelectedVideos] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   const selectVideo = (video) => {
-    setSelectedVideos(video)
+    setSelectedVideo(video)
   }
 
   const search = query => {
     youtube
     .search(query)
     .then(video => setVideos(video))
+
+    setSelectedVideo(null)
   }
 
   useEffect(() => {
