@@ -5,7 +5,9 @@ header {
 }
 
 header h1 {
-	width: 100px;
+	width: 200px;
+    flex: none;
+	margin: 0;
 }
 
 header h1 img {
@@ -14,6 +16,7 @@ header h1 img {
 
 header .input_wrap {
 	display: flex;
+	flex: 1;
 	height: 50px;
 	width: 350px;
 }
@@ -52,3 +55,13 @@ header button img {
     height: 100%;
 }
 
+@media screen and (max-width: 640px) {
+	header {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	header .input_wrap  {
+		margin: 10px;
+	}
+}

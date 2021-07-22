@@ -5,6 +5,7 @@
 
 .content {
   display: flex;
+  padding: 10px;
 }
 
 .detail {
@@ -15,3 +16,16 @@
   flex: 1 1 30%;
 }
 
+@media screen and (max-width: 640px) {
+	.content {
+		flex-wrap: wrap;
+	}
+
+  .detail {
+    flex: 1;
+  }
+
+  .list {
+    flex: 1;
+  }
+}
