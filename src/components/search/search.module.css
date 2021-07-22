@@ -60,6 +60,10 @@ header button img {
 		width: 100%;
 		flex-wrap: wrap;
 	}
+	
+	header h1 {
+		text-align: center;
+	}
 
 	header .input_wrap  {
 		margin: 10px;
